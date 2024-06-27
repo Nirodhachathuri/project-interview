@@ -1,0 +1,51 @@
+<div class="checkout">
+    <div class="cart">
+      <h1>Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2" style="align-items: center;">Product</th>
+            
+            <th>Quantity</th>
+            <th>Total Price</th>
+          </tr>
+          <tr>
+            <td colspan="5"><hr></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of array; let last = last">
+            <td style="width: 350px;">
+              <img [src]="item.image" style="height: 100px; width: 80px;">
+            </td>
+            <td>
+              {{ item.product }}
+            </td>
+            <td>
+              <div class="item-quantity">
+                <button (click)="decreaseQuantity(item)">-</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="increaseQuantity(item)">+</button>
+              </div>
+            </td>
+            <td>
+              <div class="item-price">
+                <p>{{ item.price }}</p>
+              </div>
+            </td>
+            <td>
+              <button class="remove-item" (click)="removeItem(item)">×</button>
+            </td>
+              
+          </tr>
+          <tr>
+            <td colspan="5"><hr></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="payment">
+      <app-payment-details></app-payment-details>
+    </div>
+  </div>
+  

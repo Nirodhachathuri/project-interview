@@ -1,0 +1,39 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .item-quantity button {
+    margin: 0 5px;
+  }
+  
+  .remove-item {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  hr {
+    border: 1px solid #ddd;
+    margin: 0;
+  }
+  
+  .checkout {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart {
+    width: 60%;
+  }
+  
+  .payment {
+    width: 35%;
+  }
+  
